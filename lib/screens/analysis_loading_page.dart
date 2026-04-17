@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'dart:async';
 import 'result_page.dart';
-// এখানে আপনার রেজাল্ট পেজটি ইমপোর্ট করতে হবে (পরে আমরা এটি বানাবো)
-// import 'result_page.dart';
+
 
 class AnalysisLoadingPage extends StatefulWidget {
   final String fileName;
@@ -23,21 +22,21 @@ class _AnalysisLoadingPageState extends State<AnalysisLoadingPage> {
   }
 
   void _startLoading() {
-    // একটি টাইমার সেট করা যা ৩-৪ সেকেন্ড পর পর টেক্সট এবং প্রগ্রেস বার চেঞ্জ করবে
+   
     Timer.periodic(const Duration(milliseconds: 800), (timer) {
       if (mounted) {
         setState(() {
           _progress += 0.2;
           if (_progress >= 1.0) {
             timer.cancel();
-            // এই লাইনটি এখন একটিভ করুন
+      
             Navigator.pushReplacement(
               context,
               MaterialPageRoute(builder: (context) => const ResultPage()),
             );
           }
 
-          // প্রগ্রেস অনুযায়ী মেসেজ আপডেট
+  
           if (_progress < 0.4) {
             _loadingText = "Extracting Metadata...";
           } else if (_progress < 0.7) {
@@ -60,7 +59,7 @@ class _AnalysisLoadingPageState extends State<AnalysisLoadingPage> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              // একটি সুন্দর এনিমেটেড আইকন বা সার্কুলার প্রগ্রেস
+              
               const SizedBox(
                 height: 100,
                 width: 100,

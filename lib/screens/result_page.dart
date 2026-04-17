@@ -18,7 +18,7 @@ class ResultPage extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // --- Score Section ---
+         
             Center(
               child: Container(
                 padding: const EdgeInsets.all(30),
@@ -38,7 +38,7 @@ class ResultPage extends StatelessWidget {
                           height: 150,
                           width: 150,
                           child: CircularProgressIndicator(
-                            value: 0.85, // এটি ডাইনামিক করা যাবে (৮৫%)
+                            value: 0.85, 
                             strokeWidth: 12,
                             backgroundColor: Colors.blue[50],
                             valueColor: const AlwaysStoppedAnimation<Color>(Colors.greenAccent),

@@ -3,7 +3,7 @@ import 'package:file_picker/file_picker.dart';
 import 'dart:typed_data';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'login_page.dart'; // globalProfileImageBytes এর জন্য জরুরি
+import 'login_page.dart'; 
 import 'my_profile_page.dart';
 import 'analysis_loading_page.dart';
 import 'settings_page.dart';
@@ -19,7 +19,7 @@ class _HomePageState extends State<HomePage> {
   String? _selectedFileName;
   Uint8List? _selectedFileBytes;
 
-  // Firebase ইউজার
+ 
   final User? user = FirebaseAuth.instance.currentUser;
 
   Future<void> _pickPDF() async {
@@ -131,7 +131,7 @@ class _HomePageState extends State<HomePage> {
                   ),
                   title: const Text("My Profile"),
                   onTap: () async {
-                    Navigator.pop(context); // ক্লোজ ড্রয়ার
+                    Navigator.pop(context); 
                     await Navigator.push(
                       context,
                       MaterialPageRoute(
@@ -140,7 +140,7 @@ class _HomePageState extends State<HomePage> {
                     );
                     setState(
                       () {},
-                    ); // ফিরে আসার পর প্রোফাইল পিকচার রিফ্রেশ করবে
+                    ); 
                   },
                 ),
                 ListTile(
@@ -157,7 +157,7 @@ class _HomePageState extends State<HomePage> {
                         builder: (context) => const SettingsPage(),
                       ),
                     );
-                    setState(() {}); // সেটিংস থেকে ফিরে ছবি আপডেট করবে
+                    setState(() {}); 
                   },
                 ),
                 const Spacer(),
