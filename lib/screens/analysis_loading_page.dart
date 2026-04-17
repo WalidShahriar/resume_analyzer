@@ -84,7 +84,7 @@ class _AnalysisLoadingPageState extends State<AnalysisLoadingPage> {
                 style: const TextStyle(color: Colors.grey),
               ),
               const SizedBox(height: 30),
-              // লিনিয়ার প্রগ্রেস বার
+              
               ClipRRect(
                 borderRadius: BorderRadius.circular(10),
                 child: LinearProgressIndicator(

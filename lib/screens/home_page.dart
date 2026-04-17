@@ -98,7 +98,7 @@ class _HomePageState extends State<HomePage> {
                   decoration: const BoxDecoration(color: Colors.blueAccent),
                   currentAccountPicture: CircleAvatar(
                     backgroundColor: Colors.white,
-                    // গ্লোবাল ভেরিয়েবল থেকে ছবি নেওয়া হচ্ছে
+                    
                     backgroundImage: globalProfileImageBytes != null
                         ? MemoryImage(globalProfileImageBytes!)
                         : null,
@@ -150,7 +150,7 @@ class _HomePageState extends State<HomePage> {
                   ),
                   title: const Text("Settings"),
                   onTap: () async {
-                    Navigator.pop(context); // ক্লোজ ড্রয়ার
+                    Navigator.pop(context); 
                     await Navigator.push(
                       context,
                       MaterialPageRoute(
@@ -215,7 +215,7 @@ class _HomePageState extends State<HomePage> {
                 ),
                 const SizedBox(height: 40),
 
-                // --- Upload Zone ---
+                
                 Center(
                   child: Container(
                     width: double.infinity,

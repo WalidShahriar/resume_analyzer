@@ -61,7 +61,7 @@ class ResultPage extends StatelessWidget {
             const Text("AI Insights & Suggestions", style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
             const SizedBox(height: 15),
 
-            // --- Suggestion Cards ---
+            
             _buildSuggestionCard(
               Icons.lightbulb, 
               "Add More Keywords", 
@@ -83,7 +83,7 @@ class ResultPage extends StatelessWidget {
 
             const SizedBox(height: 30),
             
-            // --- Action Buttons ---
+            
             Row(
               children: [
                 Expanded(
